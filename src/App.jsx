@@ -1,10 +1,21 @@
-const App = () => {
-    console.log('Hello from komponentti')
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+
+const Hello = () => {
     return (
         <div>
-            <p>Hello World!</p>
+            <p>Hello world</p>
         </div>
     )
 }
 
-export default App
+const App = () => {
+    return (
+        <div>
+            <h1>Greetings</h1>
+
+            <Hello/>
+        </div>
+    )
+}
+export default App;
