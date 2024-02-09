@@ -1,20 +1,26 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
-
-const Hello = () => {
+const Hello = ({ name, age }) => {
+    console.log({ name, age })
+    const bornYear = () => {
+        return new Date().getFullYear() - age
+    }
     return (
         <div>
-            <p>Hello world</p>
+
+            <p>Hello {name}, you are {age} years old</p>
+            <p>So you were probably born {bornYear()}</p>
         </div>
     )
 }
 
 const App = () => {
+    const nimi = 'Pekka'
+    const ika = 10
+
     return (
         <div>
             <h1>Greetings</h1>
-
-            <Hello/>
+            <Hello name="Maya" age={26 + 10} />
+            <Hello name={nimi} age={ika} />
         </div>
     )
 }
